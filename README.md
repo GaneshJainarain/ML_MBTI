@@ -17,3 +17,13 @@
 ### This dataset contains over 8600 rows of data, on each row is a person’s:
 - Type (This persons 4 letter MBTI code/type)
 - A section of each of the last 50 things they have posted (Each entry separated by "|||" (3 pipe characters))
+
+# ACKNOWLEDGMENTS
+### This data was collected through the PersonalityCafe forum, as it provides a large selection of people and their MBTI personality type, as well as what they have written.
+
+# INSPIRATION
+- Use machine learning to evaluate the MBTIs validity and ability to predict language styles and behaviour online.
+- Production of a machine learning algorithm that can attempt to determine a person’s personality type based on some text they have written.
+
+# NOTE
+### This excerpt was taken from Kaggles website and i will be using the datasset that is provided. 
