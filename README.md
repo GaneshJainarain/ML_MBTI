@@ -26,4 +26,4 @@
 - Production of a machine learning algorithm that can attempt to determine a person’s personality type based on some text they have written.
 
 # NOTE
-### This excerpt was taken from Kaggles website and i will be using the datasset that is provided. 
+### This excerpt was taken from Kaggles website and I will be using the data set that is provided. 
