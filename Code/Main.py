@@ -1,7 +1,8 @@
-#MBTI Personality Prediction Machine Learning Model¶
+ #MBTI Personality Prediction Machine Learning Model¶
 # Data Analysis
 import pandas as pd
 import numpy as np
+'''
 from numpy import asarray
 from numpy import savetxt
 from numpy import loadtxt
@@ -53,7 +54,11 @@ from xgboost import plot_importance
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, accuracy_score, balanced_accuracy_score
 from sklearn.metrics import precision_score, recall_score, f1_score, multilabel_confusion_matrix, confusion_matrix
 from sklearn.metrics import classification_report
-
+ '''
 # Ignore noise warning
 import warnings
 warnings.filterwarnings("ignore")
+
+#loading dataset
+data_set = pd.read_csv("/Users/richeyjay/Desktop/MBTI_ML/venv/Code/mbti_1.csv")
+print(data_set.tail())
