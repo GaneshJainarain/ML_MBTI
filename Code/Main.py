@@ -61,16 +61,16 @@ warnings.filterwarnings("ignore")
 
 #loading dataset
 data_set = pd.read_csv("/Users/richeyjay/Desktop/MBTI_ML/venv/Code/mbti_1.csv")
-print(data_set.tail())
+#print(data_set.tail())
 
 #Checking to see if there are any missing or null values in the dataset 
-print(data_set.isnull().any())
+#print(data_set.isnull().any())
 
 #Getting an idea of the size of our dataset
 nRow, nCol = data_set.shape
-print(f'There are {nRow} rows and {nCol} columns')
+#print(f'There are {nRow} rows and {nCol} columns')
 
-print(data_set.info())
+#print(data_set.info())
 '''
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 8675 entries, 0 to 8674
@@ -88,3 +88,50 @@ None
 #There are no null values present in the dataset
 #One Disadvantage is that all values are textual, 
 #hence they have to be converted to numerical form to train the ML model
+
+#print(data_set.describe(include=['object']))
+'''
+        type                                              posts
+count   8675                                               8675
+unique    16                                               8675
+top     INFP  'Sometimes I ask myself things like this when ...
+freq    1832                                                  1
+'''
+# There are 16 unique personality type indicators in the dataset
+#INFP is the most frequently occuring personality type in our dataset
+#(no. of occurences is 1832)
+#Lastly, there are no repeating posts in the dataset
+
+#Finding the unique values from the data set
+types = np.unique(np.array(data_set['type']))
+print(types)
+'''
+'ENFJ' 'ENFP' 'ENTJ' 'ENTP' 'ESFJ' 'ESFP' 'ESTJ' 'ESTP' 'INFJ' 'INFP'
+ 'INTJ' 'INTP' 'ISFJ' 'ISFP' 'ISTJ' 'ISTP']
+'''
+#16 different types corresponding to the differnt 16 mbti types
+
+total = data_set.groupby(['type']).count()*50
+#Group by allows you to split your data into separate groups 
+#to perform computations for better analysis.
+print(total)
+'''
+      posts
+type       
+ENFJ   9500
+ENFP  33750
+ENTJ  11550
+ENTP  34250
+ESFJ   2100
+ESFP   2400
+ESTJ   1950
+ESTP   4450
+INFJ  73500
+INFP  91600
+INTJ  54550
+INTP  65200
+ISFJ   8300
+ISFP  13550
+ISTJ  10250
+ISTP  16850
+'''
